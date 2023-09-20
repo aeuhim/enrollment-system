@@ -281,7 +281,7 @@ class StudentRecord(models.Model):
         ]
 
     record = models.ForeignKey(Record, on_delete=models.CASCADE)
-    student = models.OneToOneField(Student, on_delete=models.CASCADE)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
     rating = models.FloatField(blank=True, null=True)
     REMARKS = [
         ("PSD", _("Passed")),
