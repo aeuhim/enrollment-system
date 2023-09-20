@@ -108,7 +108,7 @@ class RoomAdmin(admin.ModelAdmin):
 
 class ScheduleAdmin(admin.ModelAdmin):
     list_display = ("record", "room", "day", "start_time", "end_time")
-    list_filter = ("day",)
+    list_filter = ("day", "record__academic_term", "record__academic_year",)
     search_fields = (
         "record__curriculum_course__curriculum__program__department__title",
         "record__curriculum_course__curriculum__program__title",
@@ -120,6 +120,8 @@ class ScheduleAdmin(admin.ModelAdmin):
         "professor__user__name_suffix",
     )
     ordering = (
+        "-record__academic_year",
+        "-record__academic_term",
         "professor",
         "day",
         "start_time",
