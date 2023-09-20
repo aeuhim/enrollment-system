@@ -16,9 +16,6 @@ class CustomUserAdmin(UserAdmin):
                     "middle_name",
                     "last_name",
                     "name_suffix",
-                    "permanent_address",
-                    "current_address",
-                    "emergency_number",
                 )
             },
         ),
@@ -58,9 +55,6 @@ class CustomUserAdmin(UserAdmin):
                     "middle_name",
                     "last_name",
                     "name_suffix",
-                    "permanent_address",
-                    "current_address",
-                    "emergency_number",
                 ),
             },
         ),
@@ -84,9 +78,6 @@ class CustomUserAdmin(UserAdmin):
         "is_staff",
         "email",
         "contact_number",
-        "permanent_address",
-        "current_address",
-        "emergency_number",
     )
     list_filter = ("is_staff", "is_superuser", "is_active", "groups")
     search_fields = (
@@ -95,9 +86,6 @@ class CustomUserAdmin(UserAdmin):
         "first_name",
         "email",
         "contact_number",
-        "permanent_address",
-        "current_address",
-        "emergency_number",
     )
     ordering = ("last_name", "first_name", "username")
 
